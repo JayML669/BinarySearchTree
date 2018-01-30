@@ -21,12 +21,14 @@ while True:
         tree.traverse()
     elif action == 'search':
         while True:
-            num = int(input('What number would you like to search the tree for...\n'))
-            if type(num) == int and num >= 0:
+            try:
+                num = int(input('What number would you like to search the tree for...\n'))
+            except ValueError:
+                print('Hmm... something doesnt seem quite right please only search for positive integers')
+                continue
+            else:
                 print(tree.search(num))
                 break
-            else:
-                print('Hmm... something doesnt seem quite right please only search for positive integers')
     elif action == 'exit':
         break
     else:
