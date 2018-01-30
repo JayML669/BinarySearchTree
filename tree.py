@@ -27,4 +27,4 @@ class Tree:
         self.root.visit()
 
     def search(self, num):
-        self.root.search(num)
+        return self.root.search(num)
