@@ -25,3 +25,6 @@ class Tree:
 
     def traverse(self):
         self.root.visit()
+
+    def search(self, num):
+        self.root.search(num)

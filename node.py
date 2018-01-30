@@ -26,3 +26,17 @@ class Node:
         print(self.val)
         if self.right is not None:
             self.right.visit()
+
+    def search(self, num):
+        if self.val == num:
+            print('Found ' + str(num))
+        elif self.val < num:
+            if self.right is not None:
+                self.right.search(num)
+            else:
+                print(str(num) + ' is not in the tree')
+        else:
+            if self.left is not None:
+                self.left.search(num)
+            else:
+                print(str(num) + ' is not in the tree')
